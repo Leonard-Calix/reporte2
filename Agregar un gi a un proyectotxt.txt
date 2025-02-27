@@ -1,0 +1,5 @@
+1. git init
+2. git remote -v
+3. git remote add origin https://github.com/Leonard-Calix/api-peliculas.git
+4. git remote -v
+5. git pull origin master||main
