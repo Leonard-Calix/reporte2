@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - reportes
+name: Build and deploy Node.js app to Azure Web App - reporte
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: '20.x'
+          node-version: '18.x'
 
       - name: npm install, build, and test
         run: |
@@ -60,15 +60,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F1F713697C4B4F11ACBC4EAA89454C08 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_FB985165E61B4531B06AE49276CD6872 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_068629C395C9493E9093011651613D1E }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_54CB65D9C4B449D09A447EDD7E246799 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_BF5F06921101418EAB62AE41F29EA786 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_E7A2AD229E1B4CC899382FA211B4C4A9 }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'reportes'
+          app-name: 'reporte'
           slot-name: 'Production'
           package: .
           
